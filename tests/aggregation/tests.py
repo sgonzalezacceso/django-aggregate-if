@@ -6,7 +6,7 @@ from decimal import Decimal
 from django.db.models import Q, F
 from django.test import TestCase, Approximate
 
-from aggregate_if import Sum, Count, Avg, Max, Min
+from aggregate_if import Sum, Count, Avg, Max, Min, Stddev, Variance
 
 from .models import Author, Publisher, Book, Store
 

@@ -90,6 +90,11 @@ class SqlMax(SqlAggregate):
 class SqlMin(SqlAggregate):
     sql_function = 'MIN'
 
+class SqlStddev(SqlAggregate):
+    sql_function = 'STDDEV'
+
+class SqlVariance(SqlAggregate):
+    sql_function = 'VARIANCE'
 
 class Aggregate(DjangoAggregate):
     def __init__(self, lookup, only=None, **extra):
@@ -128,3 +133,12 @@ class Max(Aggregate):
 class Min(Aggregate):
     name = 'Min'
     sql_klass = SqlMin
+
+class Stddev(Aggregate):
+    name = 'Stddev'
+    sql_klass = SqlStddev
+
+class Variance(Aggregate):
+    name = 'Variance'
+    sql_klass = SqlVariance
+
